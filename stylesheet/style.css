@@ -1,0 +1,93 @@
+:root{
+    --midnightBlack : #0D0D0D;
+    --racingRed: #D72638;
+    --stellGray: #4f4f4f;
+    --electricBlue: #00B4D8;
+    --asphaltGray: #1E1E1E;
+    --silver: #C0C0C0;
+}
+
+body{
+    margin: 0;
+    background-color: var(--asphaltGray);
+    
+}
+
+header {
+    background-color: var(--racingRed);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    color: var(--silver);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+header nav ul li:hover {
+    color: var(--electricBlue);
+    transform: translateY(-2px);
+}
+
+header nav ul li:active {
+    color: var(--racingRed);
+}
+
+h1{
+    text-align: center;
+    color: #C0C0C0;
+}
+
+h2 {
+    text-align: center;
+    color: #00B4D8;
+}
+
+span {
+    color: #C0C0C0;
+}
+
+.delete_btn {
+    margin: 10px 0;
+}
+
+.add_car, .add_user {
+    text-align: center;
+    color: #C0C0C0;
+    border: #4f4f4f 10px solid;
+    border-radius: 50px;
+    width: 30vw;
+    margin: 0 auto;
+}
+
+#user_msg {
+    text-align: center;
+    color: #00B4D8;
+}
+
+#update_car {
+    display: none;
+    
+}
