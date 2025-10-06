@@ -5,21 +5,22 @@
     --electricBlue: #00B4D8;
     --asphaltGray: #1E1E1E;
     --silver: #C0C0C0;
+    --canaryYellow: #FFFF8F;
 }
 
 body{
-    margin: 0;
+    margin: 0 auto;
+    padding: 0;
     background-color: var(--asphaltGray);
-    
+    width: 80vw;
+    width: 80svw;
 }
 
 header {
     background-color: var(--racingRed);
     padding: 1rem 2rem;
     box-shadow: 0 2px 6px rgba(0,0,0,0.6);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    margin: 1rem;
 }
 
 header nav{
@@ -73,7 +74,8 @@ span {
     margin: 10px 0;
 }
 
-.add_car, .add_user {
+#add_car, .add_user, .add_rca, .add_itp, .update_car, .login, .register {
+    padding-top: 1rem;
     text-align: center;
     color: #C0C0C0;
     border: #4f4f4f 10px solid;
@@ -82,12 +84,32 @@ span {
     margin: 0 auto;
 }
 
-#user_msg {
+#msg {
     text-align: center;
     color: #00B4D8;
 }
 
-#update_car {
-    display: none;
-    
+a{
+    color: var(--electricBlue);
+    cursor: default;
+    text-decoration: none;
+}
+
+.add_smth {
+    color: var(--electricBlue);
+    margin-left: 3rem;
+}
+
+input{
+    width: 15rem;
+}
+
+#cars {
+    color: var(--canaryYellow);
+    margin-left: 3rem;
+}
+
+.delete_rca, .delete_itp, .delete_car {
+    width: auto;
+    background-color: var(--racingRed);
 }
