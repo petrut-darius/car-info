@@ -28,7 +28,7 @@ require_once "../../views/includes/header.inc.php";
                 window.location.reload(); 
             }
 
-            $.post("/pdi/car-app/backend/user.php", {password: password, email: email}, function() {
+            $.post("/backend/user.php", {password: password, email: email}, function() {
                 //nimica
             }).fail(function(xhr, status, error) {
                 console.log(xhr.responseText);

@@ -78,7 +78,7 @@ endif;
             }
 
             $.ajax({
-                url: "/pdi/car-app/backend/car.php",
+                url: "/backend/car.php",
                 type: "PATCH",
                 data: {car_id: car_id, numar_inmatriculare_nou: numar_inmatriculare_nou},
                 success: function(res) {

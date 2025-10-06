@@ -81,7 +81,7 @@ endif;
                 window.location.reload();
             }
         
-            $.post("/pdi/car-app/backend/rca.php", {car_id: car_id, rca_start: rca_start, rca_duration: rca_duration}, function(msg) {
+            $.post("/backend/rca.php", {car_id: car_id, rca_start: rca_start, rca_duration: rca_duration}, function(msg) {
                 sessionStorage.setItem("msg", msg);
                 window.location.reload();
                 console.log("Sever respone:" + msg);

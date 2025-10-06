@@ -41,7 +41,7 @@ require_once "../../views/includes/header.inc.php";
                 window.location.reload();
             }
 
-            $.post("/pdi/car-app/backend/car.php", { marca: marca, model: model, an: an, serie_sasiu: serie_sasiu, numar_inmatriculare: numar_inmatriculare, volum_motor: volum_motor}, function(msg) {
+            $.post("/backend/car.php", { marca: marca, model: model, an: an, serie_sasiu: serie_sasiu, numar_inmatriculare: numar_inmatriculare, volum_motor: volum_motor}, function(msg) {
                 sessionStorage.setItem("msg", msg);
                 window.location.reload();
                 console.log("Server response:", msg);

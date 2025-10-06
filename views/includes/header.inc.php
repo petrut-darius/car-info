@@ -6,12 +6,12 @@
     <nav>
         <ul>
             <?php if(isset($_SESSION["user_id"]) && !empty($_SESSION["user_id"])): ?>
-                <a href="/pdi/car-app/views/cars/index.php"><li>Cars</li></a>
-                <a href="/pdi/car-app/views/cars/update.php"><li>Update car</li></a>
+                <a href="/views/cars/index.php"><li>Cars</li></a>
+                <a href="/views/cars/update.php"><li>Update car</li></a>
                 <li id="logout">Delogare</li>
             <?php else: ?>
-                <a href="/pdi/car-app/views/users/login.php"><li>Logheaza-te</li></a>
-                <a href="/pdi/car-app/views/users/register.php"><li>Inregistreaza-te</li></a>
+                <a href="/views/users/login.php"><li>Logheaza-te</li></a>
+                <a href="/views/users/register.php"><li>Inregistreaza-te</li></a>
             <?php endif; ?>
         </ul>
     </nav>
@@ -28,7 +28,7 @@ $(document).ready(function() {
 
     $("#logout").on("click", function() {
         $.ajax({
-            url: "/pdi/car-app/backend/user.php",
+            url: "/backend/user.php",
             type: "DELETE",
             data: $.param({user_id: user_id}),
             success: function(res) {

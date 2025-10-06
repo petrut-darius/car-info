@@ -34,8 +34,8 @@
     <link rel="stylesheet" href="../../stylesheet/style.css">
 </head>
 <?php
-require_once "../..//backend/auth.inc.php";
-require_once "../../views/includes/header.inc.php";
+require_once "../../backend/auth.inc.php";
+require_once "../includes/header.inc.php";
 if(isset($_SESSION["user_id"]) && !empty($_SESSION["user_id"])) :
     $user_id = $_SESSION["user_id"];
     $db = db_connection();
@@ -81,7 +81,7 @@ endif;
                 window.location.reload();
             }
         
-            $.post("/pdi/car-app/backend/itp.php", {car_id: car_id, itp_start: itp_start, itp_duration: itp_duration}, function(msg) {
+            $.post("/backend/itp.php", {car_id: car_id, itp_start: itp_start, itp_duration: itp_duration}, function(msg) {
                 sessionStorage.setItem("msg", msg);
                 window.location.reload();
                 console.log("Sever respone:" + msg);

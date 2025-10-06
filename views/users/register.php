@@ -43,7 +43,7 @@ require_once "../../views/includes/header.inc.php";
                 window.location.reload();
             }
 
-            $.post("/pdi/car-app/backend/user.php", {first_name: first_name, last_name: last_name, birth_date: birth_date, password: password, password_again: password_again, email: email}, function(msg) {
+            $.post("/backend/user.php", {first_name: first_name, last_name: last_name, birth_date: birth_date, password: password, password_again: password_again, email: email}, function(msg) {
                 sessionStorage.setItem("msg", msg);
             }).fail(function(xhr, status, error) {
                 console.log("Server error: " + error);

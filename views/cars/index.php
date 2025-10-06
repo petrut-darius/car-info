@@ -19,7 +19,7 @@ require_once "../../views/includes/header.inc.php";
                 $("#msg").html(msg);
                 sessionStorage.removeItem("msg");
             }
-        $.get("/pdi/car-app/backend/car.php", null, function(data) {
+        $.get("/backend/car.php", null, function(data) {
             $("#cars").html(data);
         });
         
@@ -33,7 +33,7 @@ require_once "../../views/includes/header.inc.php";
             }
 
             $.ajax({
-                url: "/pdi/car-app/backend/rca.php",
+                url: "/backend/rca.php",
                 type: "DELETE",
                 data: $.param({car_id: car_id, rca_id: rca_id}),
                 success: function(res) {
@@ -59,7 +59,7 @@ require_once "../../views/includes/header.inc.php";
             }
 
             $.ajax({
-                url: "/pdi/car-app/backend/itp.php",
+                url: "/backend/itp.php",
                 type: "DELETE",
                 data: $.param({car_id: car_id, itp_id: itp_id}),
                 success: function(res) {
@@ -83,7 +83,7 @@ require_once "../../views/includes/header.inc.php";
             }
 
             $.ajax({
-                url: "/pdi/car-app/backend/car.php",
+                url: "/backend/car.php",
                 type: "DELETE",
                 data: $.param({car_id: car_id}),
                 success: function(res) {
